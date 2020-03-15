@@ -1,0 +1,504 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: white;
+  font-size: 18px;
+  margin: auto;
+  font-family: 'Avenir', sans-serif;
+}
+
+footer{
+  background: #0d9996;
+  color: white;
+  width: 100%;
+  margin: auto;
+  margin-top:5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 10px;
+  padding-top: 25px;
+  text-align: center;
+  font-family: 'Avenir', sans-serif;
+}
+
+h2{
+  font-size: 26px;
+  line-height: 1;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Avenir', sans-serif;
+}
+
+h3{
+  color: black;
+}
+
+
+p{
+  font-family: 'Avenir', sans-serif;
+  padding: 10px;
+  text-align: center;
+}
+
+ol{
+  padding: 30px;
+  font-family: 'Avenir', sans-serif;
+}
+a.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+}
+
+a.skip:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
+*:focus{
+  border: 2px solid black;
+}
+
+
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-bottom: 4px solid #0d9996;
+  font-family: 'Avenir'
+}
+
+#logo {
+    align-self: center;
+    width: 60px;
+    height: 60px;
+    padding-top: 20px;
+    -webkit-animation:spin 4s linear;
+    -moz-animation:spin 4s linear;
+    animation:spin 4s linear;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  #logo{
+    animation: none;
+  }
+}
+
+.nav_links{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.nav_item a{
+  color: black;
+  text-decoration: none;
+}
+
+.link{
+  color: white;
+
+}
+
+.mainimages{
+  display: grid;
+  grid-column-gap: 15px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 250px;
+  margin: auto;
+  padding: 15px;
+
+}
+
+.mainimages div{
+  overflow: hidden;
+
+}
+
+.mainimages>img {
+object-fit: cover;
+width: 100%;
+height: 100%;
+}
+
+.nav_item a:hover, a:focus{
+  color: #0d9996;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+
+.nav_item a:active{
+  text-decoration: underline;
+}
+
+.nav_item_on{
+  text-decoration: underline;
+  color: black;
+}
+
+
+.container{
+  padding: 15px;
+
+}
+
+.text-block{
+  border: 10px solid #0d9996;
+  padding: 30px;
+  vertical-align: middle;
+  align-self: center;
+  line-height: 1.25;
+  margin: 10px;
+}
+
+
+
+
+.top h1{
+  color: #1e1e1e;
+  font-weight: bold;
+  text-shadow:
+    0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+.top h1 {
+  text-align: center;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+.top{
+  background-attachment: fixed;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-self: center;
+  color: black;
+  height: 400px;
+  width:100%;
+  background-image: url("../images/wilmas1.jpg");
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .top h1{
+  padding-top: 140px;
+}
+
+.top p{
+  padding-bottom: 140px;
+  padding-left: 70px;
+  padding-right: 70px;
+  line-height: 1.5;
+} */
+
+
+.flip-card h2{
+  padding-top: 15px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  position: relative;
+  margin: auto;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  /* align-self: center;
+  vertical-align: middle; */
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #0d9996;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #0d9996;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.gallery{
+  display: grid;
+  grid-column-gap: 5px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(9,350px);
+  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+}
+
+.gallery img:hover{
+    opacity: 50%;
+}
+
+.gallery div{
+  overflow: hidden;
+
+}
+
+.gallery>img{
+  object-fit: cover;
+  width: 90%;
+  height: 95%;
+  border-radius: 3px;
+  justify-self: center;
+}
+
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  font-family: 'Avenir', sans-serif;
+
+}
+
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #0d9996;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #0d7c76;
+}
+
+/* Add a background color and some padding around the form */
+.form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+@media screen and (min-width: 760px){
+  header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+
+  #logo{
+    padding-top: 10px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .nav_links{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+
+  }
+
+  .nav_item a{
+    padding: 10px;
+  }
+
+  .gallery{
+    display: grid;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 350px);
+    margin: auto;
+    padding: 15px;
+
+  }
+
+
+
+
+  .gallery div{
+    overflow: hidden;
+
+  }
+
+  .gallery>img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card-front h2{
+  text-align: center;
+}
+
+.mainimages{
+  display: grid;
+  grid-column-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 250px;
+  margin: auto;
+  padding: 15px;
+
+}
+
+.mainimages div{
+  overflow: hidden;
+
+}
+
+.mainimages>img {
+object-fit: cover;
+width: 100%;
+height: 100%;
+}
+
+
+.text-block{
+  position: relative;
+  margin: auto;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin: 10px;
+  border: 10px solid #0d9996;
+  padding: 30px;
+  line-height: 1.25;
+
+}
+
+.text-block p, h2{
+  text-align: left;
+}
+
+
+
+.form{
+  width: 700px;
+  position: relative;
+  margin: auto;
+
+}
+
+@media screen and (min-width: 1024px){
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .gallery{
+    display: grid;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 350px);
+    margin: auto;
+    /* width: 95vw;
+    height: 30vh; */
+    padding: 15px;
+
+  }
+
+  .mainimages{
+    display: grid;
+    grid-column-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 250px;
+    margin: auto;
+    padding: 15px;
+
+  }
+
+  .mainimages div{
+    overflow: hidden;
+
+  }
+
+  .mainimages>img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  }
+
+}
